@@ -1,0 +1,16 @@
+<scroll-view class="wrapper"
+  scroll-y="{{true}}"
+  bindscroll="onScroll">
+  <view class="inner" 
+    style="height: {{totalHeight}}px; max-height: {{totalHeight}}px">
+    <view class="list" style="margin-top: {{topMargin}}px">
+      <view class="item" id="item{{idx}}"
+        wx:for="{{renderData}}"
+        wx:for-item="item" 
+        wx:for-index="idx"
+        wx:key="idx">
+        {{item.name}}
+      </view>
+    </view>
+  </view>
+</scroll-view>
